@@ -15,6 +15,7 @@ export class HomePage {
     ) { }
 
     ngOnInit() {
+
         console.log('ngOnInit');
         this.toastController.create({
             message: 'ngOnInit',
@@ -26,7 +27,6 @@ export class HomePage {
             toast.present();
         });
 
-        PushNotifications.register();
         PushNotifications.addListener('registration', (token: PushNotificationToken) => {
             console.log('token ' + token.value);
             this.toastController.create({
@@ -39,11 +39,23 @@ export class HomePage {
                 toast.present();
             });
         });
+
         PushNotifications.addListener('registrationError', (error: any) => {
             console.log('error on register ' + JSON.stringify(error));
         });
+
         PushNotifications.addListener('pushNotificationReceived', (notification: PushNotification) => {
             console.log('notification ' + JSON.stringify(notification));
+        });
+
+        PushNotifications.register();
+
+        PushNotifications.listChannels().then((data) => {
+            console.log('listChannels', data);
+        });
+
+        PushNotifications.getDeliveredNotifications().then((data) => {
+            console.log('getDeliveredNotifications', data);
         });
     }
 }
