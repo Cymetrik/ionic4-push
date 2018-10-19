@@ -10,6 +10,8 @@ const { PushNotifications } = Plugins;
 })
 export class HomePage {
 
+    public token: string;
+
     constructor(
         public toastController: ToastController
     ) { }
@@ -28,6 +30,7 @@ export class HomePage {
         });
 
         PushNotifications.addListener('registration', (token: PushNotificationToken) => {
+            this.token = token.value;
             console.log('token ' + token.value);
             this.toastController.create({
                 message: token.value,
@@ -50,12 +53,30 @@ export class HomePage {
 
         PushNotifications.register();
 
+        /*
+        // Android only. Example response:
+
+        channels: Array(1)
+            0:
+                description: "Default"
+                id: "default"
+                importance: 3
+                name: "Default"
+                visibility: -1000
+        */
+        /*
         PushNotifications.listChannels().then((data) => {
             console.log('listChannels', data);
         });
+        */
 
+        /* iOS only. Example response:
+            { "notifications":[] }
+        */
+        /*
         PushNotifications.getDeliveredNotifications().then((data) => {
             console.log('getDeliveredNotifications', data);
         });
+        */
     }
 }
