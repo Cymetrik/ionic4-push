@@ -1,0 +1,6 @@
+{
+  "appId": "com.cymetrikcoreuser.app",
+  "appName": "CymetrikCoreUser",
+  "bundledWebRuntime": false,
+  "webDir": "www"
+}

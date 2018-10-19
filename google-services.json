@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "71692060907",
+    "firebase_url": "https://cymetrikcoreuser.firebaseio.com",
+    "project_id": "cymetrikcoreuser",
+    "storage_bucket": "cymetrikcoreuser.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71692060907:android:c1712d715956aede",
+        "android_client_info": {
+          "package_name": "com.cymetrikcoreuser.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "71692060907-t5og911l4vu106cm07q5ajmst9l2a1ci.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cymetrikcoreuser.app",
+            "certificate_hash": "c09370f0580401f5eec29683d17dc5d5015f4ce5"
+          }
+        },
+        {
+          "client_id": "71692060907-bquon7dq4rrdf0t6kst1inigji5edsj7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtSHC0_KXqDi7XYfa8SJFxP_GT4ZwPQz0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "71692060907-bquon7dq4rrdf0t6kst1inigji5edsj7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "71692060907-ri1eriq5mnbpetrngb5m5j7q0f22m6pn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.cymetrikcoreuser.app"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
