@@ -74,7 +74,7 @@ export class HomePage {
     public writeClipboard() {
 
         Plugins.Clipboard.write({
-            string: 'test'
+            string: this.token
         });
     }
 }
