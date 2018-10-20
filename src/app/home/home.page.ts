@@ -32,15 +32,6 @@ export class HomePage {
         PushNotifications.addListener('registration', (token: PushNotificationToken) => {
             this.token = token.value;
             console.log('token ' + token.value);
-            this.toastController.create({
-                message: token.value,
-                duration: 10000,
-                position: 'top',
-                showCloseButton: true,
-                closeButtonText: ''
-            }).then((toast) => {
-                toast.present();
-            });
         });
 
         PushNotifications.addListener('registrationError', (error: any) => {
@@ -78,5 +69,12 @@ export class HomePage {
             console.log('getDeliveredNotifications', data);
         });
         */
+    }
+
+    public writeClipboard() {
+
+        Plugins.Clipboard.write({
+            string: 'test'
+        });
     }
 }
