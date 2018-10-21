@@ -35,11 +35,17 @@ export class HomePage {
         });
 
         PushNotifications.addListener('registrationError', (error: any) => {
-            console.log('error on register ' + JSON.stringify(error));
+            console.log('error on register ' + error);
         });
 
         PushNotifications.addListener('pushNotificationReceived', (notification: PushNotification) => {
-            console.log('notification ' + JSON.stringify(notification));
+            console.log('pushNotificationReceived:title=' + notification.title);
+            console.log('pushNotificationReceived:subtitle=' + notification.subtitle);
+            console.log('pushNotificationReceived:body=' + notification.body);
+            console.log('pushNotificationReceived:id=' + notification.id);
+            console.log('pushNotificationReceived:badge=' + notification.badge);
+            console.log('pushNotificationReceived:notification=' + notification.notification);
+            console.log('pushNotificationReceived:data=' + notification.data);
         });
 
         PushNotifications.register();
